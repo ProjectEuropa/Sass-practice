@@ -1,0 +1,21 @@
+header {
+    span {
+        color: chartreuse;
+    }
+}
+
+main {
+    #main-menu {
+        margin-top: 100px
+    }
+    a {
+        color: #000;
+    }
+    ul.nav li a {
+        padding: 0 10px;
+        &:hover {
+            color: chartreuse;
+            text-underline-position: left;
+        }
+    }
+}

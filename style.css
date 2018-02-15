@@ -1,0 +1,14 @@
+header span {
+  color: chartreuse; }
+
+main #main-menu {
+  margin-top: 100px; }
+main a {
+  color: #000; }
+main ul.nav li a {
+  padding: 0 10px; }
+  main ul.nav li a:hover {
+    color: chartreuse;
+    text-underline-position: left; }
+
+/*# sourceMappingURL=style.css.map */
