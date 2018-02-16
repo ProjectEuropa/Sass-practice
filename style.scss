@@ -1,3 +1,6 @@
+$blackcolor: #000;
+$whitecolor: #fff;
+
 header {
     span {
         color: chartreuse;
@@ -6,16 +9,112 @@ header {
 
 main {
     #main-menu {
-        margin-top: 100px
+        margin-top: 100px;
+        margin-bottom: 20px;
     }
     a {
-        color: #000;
+        color: $blackcolor;
     }
     ul.nav li a {
-        padding: 0 10px;
+        padding: 0 20px;
         &:hover {
             color: chartreuse;
             text-underline-position: left;
+            text-decoration: none;
+        }
+    }
+    .accordion li ul {
+        display: none;
+        position: absolute;
+        list-style: none;
+        z-index: 999;
+        background-color: $whitecolor;
+        li a {
+            margin-left: -40px;
+        }
+    }
+    .ggmap {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .ggmap iframe,
+    .ggmap object,
+    .ggmap embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+div#second-content {
+    background-color: antiquewhite;
+    .second-title {
+        font-size: 1.5em;
+        text-decoration: underline chartreuse;
+    }
+    .third-title {
+        font-size: 1.2em;
+    }
+    article {
+        background-color: $whitecolor;
+        margin-top: 10px;
+        padding-top: 25px;
+        padding-right: 20px;
+        border: solid 0.5px gray;
+        .text-content {
+            display: flex;
+            justify-content: center;
+        }
+        .icon-style {
+            padding: 20px 10px;
+        }
+        .fas,
+        .far,
+        .fab {
+            padding: 10px;
+            font-size: 2em;
+        }
+    }
+
+    .row {
+        padding-bottom: 40px;
+    }
+    .category-link {
+        color: $blackcolor;
+    }
+
+    aside#login-form {
+        background-color: $whitecolor;
+        margin-top: 10px;
+        form {
+            padding: 10px 15px 10px;
+            border: solid 0.5px gray;
+            .btn-left {
+                margin-right: 5px;
+            }
+            .aside-buttons {
+                margin-bottom: 10px;
+            }
+            .btn-block + .btn-block {
+                margin: 0;
+            }
+        }
+
+    }
+    aside#advertisement-content {
+        background-color: antiquewhite;
+        .advertisement {
+            width: 100%;
+            height: 100%;
+        }
+        .circle-icon {
+
         }
     }
 }

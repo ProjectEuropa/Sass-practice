@@ -2,13 +2,86 @@ header span {
   color: chartreuse; }
 
 main #main-menu {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 20px; }
 main a {
   color: #000; }
 main ul.nav li a {
-  padding: 0 10px; }
+  padding: 0 20px; }
   main ul.nav li a:hover {
     color: chartreuse;
-    text-underline-position: left; }
+    text-underline-position: left;
+    text-decoration: none; }
+main .accordion li ul {
+  display: none;
+  position: absolute;
+  list-style: none;
+  z-index: 999;
+  background-color: #fff; }
+  main .accordion li ul li a {
+    margin-left: -40px; }
+main .ggmap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+main .ggmap iframe,
+main .ggmap object,
+main .ggmap embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+div#second-content {
+  background-color: antiquewhite; }
+  div#second-content .second-title {
+    font-size: 1.5em;
+    text-decoration: underline chartreuse; }
+  div#second-content .third-title {
+    font-size: 1.2em; }
+  div#second-content article {
+    background-color: #fff;
+    margin-top: 10px;
+    padding-top: 25px;
+    padding-right: 20px;
+    border: solid 0.5px gray; }
+    div#second-content article .text-content {
+      display: flex;
+      justify-content: center; }
+    div#second-content article .icon-style {
+      padding: 20px 10px; }
+    div#second-content article .fas,
+    div#second-content article .far,
+    div#second-content article .fab {
+      padding: 10px;
+      font-size: 2em; }
+  div#second-content .row {
+    padding-bottom: 40px; }
+  div#second-content .category-link {
+    color: #000; }
+  div#second-content aside#login-form {
+    background-color: #fff;
+    margin-top: 10px; }
+    div#second-content aside#login-form form {
+      padding: 10px 15px 10px;
+      border: solid 0.5px gray; }
+      div#second-content aside#login-form form .btn-left {
+        margin-right: 5px; }
+      div#second-content aside#login-form form .aside-buttons {
+        margin-bottom: 10px; }
+      div#second-content aside#login-form form .btn-block + .btn-block {
+        margin: 0; }
+  div#second-content aside#advertisement-content {
+    background-color: antiquewhite; }
+    div#second-content aside#advertisement-content .advertisement {
+      width: 100%;
+      height: 100%; }
+    div#second-content aside#advertisement-content .circle-icon {
+      margin-top: -50px;
+      background-color: #fff;
+      border-radius: 50%; }
 
 /*# sourceMappingURL=style.css.map */
