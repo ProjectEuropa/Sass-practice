@@ -1,3 +1,12 @@
+.under-line-extend, div#second-content .info p.info-content::before, div#second-content .info p.info-content::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -16px;
+  height: 10px;
+  width: 32px;
+  border-bottom: 2px solid #000; }
+
 header span {
   color: chartreuse; }
 
@@ -79,9 +88,68 @@ div#second-content {
     div#second-content aside#advertisement-content .advertisement {
       width: 100%;
       height: 100%; }
-    div#second-content aside#advertisement-content .circle-icon {
-      margin-top: -50px;
+  div#second-content #best-prace-content {
+    margin-left: 10px; }
+  div#second-content .info {
+    border: solid 0.5px;
+    margin-top: 10px; }
+    div#second-content .info .fa-star {
+      color: gold; }
+    div#second-content .info p.info-content::before {
+      top: 63%; }
+    div#second-content .info p.info-content::after {
+      top: 80%; }
+    div#second-content .info i.icon-style {
+      margin-top: -30px;
       background-color: #fff;
       border-radius: 50%; }
+  div#second-content .place-content i.icon-style {
+    margin-top: -30px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    right: left;
+    left: -15%; }
+  div#second-content .evaluation {
+    margin-top: 60px; }
+    div#second-content .evaluation i.star-icon-style {
+      font-size: 1.3em;
+      color: gold; }
+    div#second-content .evaluation::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -55px;
+      left: 0;
+      height: 32px;
+      border-right: 2px solid #000;
+      text-align: center; }
+  div#second-content .place-border {
+    border: solid 0.5px; }
+  div#second-content .b-crumb {
+    margin-left: 15px; }
+  div#second-content div.pagenav {
+    margin-left: 15px; }
+
+aside #month-calendar-current {
+  background-color: #fff;
+  padding: 0; }
+
+.carousel-inner .active.left {
+  left: -25%; }
+
+.carousel-inner .next {
+  left: 25%; }
+
+.carousel-inner .prev {
+  left: -25%; }
+
+.carousel-control {
+  width: 4%; }
+
+.carousel-control.left, .carousel-control.right {
+  margin-left: 15px;
+  background-image: none; }
 
 /*# sourceMappingURL=style.css.map */
