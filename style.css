@@ -7,6 +7,9 @@
   width: 32px;
   border-bottom: 2px solid #000; }
 
+.border-gray, div#second-content aside#login-form form, aside #calendar {
+  border: solid 0.5px gray; }
+
 header span {
   color: chartreuse; }
 
@@ -75,8 +78,7 @@ div#second-content {
     background-color: #fff;
     margin-top: 10px; }
     div#second-content aside#login-form form {
-      padding: 10px 15px 10px;
-      border: solid 0.5px gray; }
+      padding: 10px 15px 10px; }
       div#second-content aside#login-form form .btn-left {
         margin-right: 5px; }
       div#second-content aside#login-form form .aside-buttons {
@@ -131,25 +133,68 @@ div#second-content {
     margin-left: 15px; }
   div#second-content div.pagenav {
     margin-left: 15px; }
+  div#second-content .slick-slider {
+    filter: grayscale(100%);
+    max-height: 30%; }
+    div#second-content .slick-slider img.silder-image {
+      filter: grayscale(100%); }
 
-aside #month-calendar-current {
+aside #calendar {
   background-color: #fff;
   padding: 0; }
+  aside #calendar .fc-today {
+    background-color: blue; }
 
-.carousel-inner .active.left {
-  left: -25%; }
-
-.carousel-inner .next {
-  left: 25%; }
-
-.carousel-inner .prev {
-  left: -25%; }
-
-.carousel-control {
-  width: 4%; }
-
-.carousel-control.left, .carousel-control.right {
-  margin-left: 15px;
-  background-image: none; }
+footer {
+  background-color: #2C3E52;
+  color: #9399A2; }
+  footer .footer-main-content {
+    padding: 0; }
+  footer p.footer-title {
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 20px; }
+    footer p.footer-title::after {
+      content: normal;
+      border-top: 10px solid red;
+      flex-grow: 1; }
+  footer ul li {
+    list-style: none;
+    border: 1px solid #9399A2;
+    padding: 5px 20px;
+    margin-left: -40px; }
+    footer ul li a {
+      color: #9399A2; }
+  footer #copy-right {
+    background-color: #2a2a2a; }
+  footer .separator {
+    width: auto;
+    border-top: 1px solid #dbdbdb;
+    margin-top: 14px;
+    position: relative;
+    overflow: hidden;
+    border-color: rgba(255, 255, 255, 0.1); }
+  footer .social-icons {
+    font-size: 1.5em;
+    filter: grayscale(100%); }
+  footer .small {
+    font-size: 100%; }
+  footer .twitter {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 5px 12px;
+    font-size: 1em;
+    margin-bottom: 10px; }
+    footer .twitter p span {
+      color: aquamarine;
+      font-style: oblique; }
+  footer .photos {
+    margin-left: -15px; }
+    footer .photos .indivisual-phpto {
+      margin-bottom: 3px; }
+    footer .photos .thumbnail {
+      max-height: 6%;
+      max-height: 6%;
+      margin-left: 2px; }
 
 /*# sourceMappingURL=style.css.map */
