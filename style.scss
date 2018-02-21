@@ -1,5 +1,6 @@
 $blackcolor: #000;
 $whitecolor: #fff;
+$thickgreen: #90c23a;
 
 .under-line-extend {
     content: "";
@@ -9,6 +10,15 @@ $whitecolor: #fff;
     height: 10px;
     width: 32px;
     border-bottom: 2px solid $blackcolor;
+}
+
+.smart-icon-extend {
+    border-radius: 2px;
+    display: inline-block;
+    padding: 8.5px 10px;
+    transition: all 0.35s ease 0s;
+    border: 1px solid #e1e1e1;
+    background: none repeat scroll 0 0 #fff;
 }
 
 .border-gray {
@@ -26,13 +36,54 @@ main {
         margin-top: 100px;
         margin-bottom: 20px;
     }
+    a i.fa-bars {
+        @extend .smart-icon-extend;
+    }
+    ul.smart-show {
+        display: none;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+        height: 100%;
+        background-color: #fff;
+        li {
+            #hide-smart-menu {
+                text-align: center
+            }
+            i.fa-times {
+                @extend .smart-icon-extend;
+            }
+            a {
+                display: block;
+                font-size: 12px;
+                height: 52px;
+                line-height: 52px;
+                padding: 0 20px;
+                text-transform: capitalize;
+                width: 100%;
+                border-bottom: 1px solid gray;
+                &:hover {
+                    color: $thickgreen;
+                }
+                &:nth-child(2) {
+                    border-top: 1px solid gray;
+                }
+            }
+        }
+    }
     a {
         color: $blackcolor;
     }
     ul.nav li a {
-        padding: 0 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         &:hover {
-            color: chartreuse;
+            color: $thickgreen;
             text-underline-position: left;
             text-decoration: none;
         }
@@ -42,9 +93,13 @@ main {
         position: absolute;
         list-style: none;
         z-index: 999;
-        background-color: $whitecolor;
+        background-color: #f9f9f9;
         li a {
             margin-left: -40px;
+            text-align: left;
+            border: 1px solid #e5e5e5;
+            display: block;
+            z-index: 10000;
         }
     }
     .ggmap {
@@ -63,17 +118,25 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 1;
     }
 }
 
 div#second-content {
-    background-color: antiquewhite;
+    background-color: #e1e1e1;
     .second-title {
-        font-size: 1.5em;
-        text-decoration: underline chartreuse;
+        font-size: 1em;
+        text-decoration: underline #90c23a;
     }
     .third-title {
         font-size: 1.2em;
+    }
+    h2.article-space {
+        margin-top: 30px;
+    }
+    p.article-text {
+        color: #979797;
+        font-size: 0.9em;
     }
     article {
         background-color: $whitecolor;
@@ -99,24 +162,37 @@ div#second-content {
     .row {
         padding-bottom: 40px;
     }
-    .category-link {
+    a.link {
         color: $blackcolor;
     }
 
-    aside#login-form {
+    aside#login-register-form {
         background-color: $whitecolor;
         margin-top: 10px;
         form {
             padding: 10px 15px 10px;
             @extend .border-gray;
+            .btn {
+                color: $whitecolor;
+            }
             .btn-left {
                 margin-right: 5px;
+            }
+            .submit-btn {
+                background-color: #90c23a;
+                border-color: #90c23a;
             }
             .aside-buttons {
                 margin-bottom: 10px;
             }
             .btn-block + .btn-block {
                 margin: 0;
+            }
+            .active {
+                background: #2C3E52;
+            }
+            #register {
+                display: none;
             }
         }
 
@@ -130,7 +206,8 @@ div#second-content {
 
     }
     #best-prace-content {
-        margin-left: 10px;
+        margin-left: 0px;
+
     }
 
     .info {
@@ -141,11 +218,11 @@ div#second-content {
         }
         p.info-content::before {
             @extend .under-line-extend;
-            top: 63%;
+            top: 67%;
         }
         p.info-content::after {
             @extend .under-line-extend;
-            top: 80%;
+            top: 78%;
         }
         i.icon-style {
             margin-top: -30px;
@@ -155,6 +232,7 @@ div#second-content {
     }
 
     .place-content {
+        padding-top: 10px;
         i.icon-style {
             margin-top: -30px;
             position: absolute;
@@ -164,6 +242,7 @@ div#second-content {
             right: left;
             left: -15%;
         }
+
     }
     .evaluation {
         margin-top: 60px;
@@ -274,12 +353,17 @@ footer {
         margin-left: -15px;
         .indivisual-phpto {
             margin-bottom: 3px;
-        }
-        .thumbnail {
-            max-height: 6%;
-            max-height: 6%;
-            margin-left: 2px;
+            .img-thumbnail {
+                height: 60px;
+                width: 80px;
+                margin-left: 2px;
+                background-color: rgba(255, 255, 255, 0.15);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+            }
         }
     }
+}
 
+@media screen and (max-width 767px) {
+    main {}
 }

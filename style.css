@@ -7,7 +7,15 @@
   width: 32px;
   border-bottom: 2px solid #000; }
 
-.border-gray, div#second-content aside#login-form form, aside #calendar {
+.smart-icon-extend, main a i.fa-bars, main ul.smart-show li i.fa-times {
+  border-radius: 2px;
+  display: inline-block;
+  padding: 8.5px 10px;
+  transition: all 0.35s ease 0s;
+  border: 1px solid #e1e1e1;
+  background: none repeat scroll 0 0 #fff; }
+
+.border-gray, div#second-content aside#login-register-form form, aside #calendar {
   border: solid 0.5px gray; }
 
 header span {
@@ -16,12 +24,40 @@ header span {
 main #main-menu {
   margin-top: 100px;
   margin-bottom: 20px; }
+main ul.smart-show {
+  display: none;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  height: 100%;
+  background-color: #fff; }
+  main ul.smart-show li #hide-smart-menu {
+    text-align: center; }
+  main ul.smart-show li a {
+    display: block;
+    font-size: 12px;
+    height: 52px;
+    line-height: 52px;
+    padding: 0 20px;
+    text-transform: capitalize;
+    width: 100%;
+    border-bottom: 1px solid gray; }
+    main ul.smart-show li a:hover {
+      color: #90c23a; }
+    main ul.smart-show li a:nth-child(2) {
+      border-top: 1px solid gray; }
 main a {
   color: #000; }
 main ul.nav li a {
-  padding: 0 20px; }
+  padding-left: 20px;
+  padding-right: 20px; }
   main ul.nav li a:hover {
-    color: chartreuse;
+    color: #90c23a;
     text-underline-position: left;
     text-decoration: none; }
 main .accordion li ul {
@@ -29,9 +65,13 @@ main .accordion li ul {
   position: absolute;
   list-style: none;
   z-index: 999;
-  background-color: #fff; }
+  background-color: #f9f9f9; }
   main .accordion li ul li a {
-    margin-left: -40px; }
+    margin-left: -40px;
+    text-align: left;
+    border: 1px solid #e5e5e5;
+    display: block;
+    z-index: 10000; }
 main .ggmap {
   position: relative;
   padding-bottom: 56.25%;
@@ -45,15 +85,21 @@ main .ggmap embed {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  z-index: 1; }
 
 div#second-content {
-  background-color: antiquewhite; }
+  background-color: #e1e1e1; }
   div#second-content .second-title {
-    font-size: 1.5em;
-    text-decoration: underline chartreuse; }
+    font-size: 1em;
+    text-decoration: underline #90c23a; }
   div#second-content .third-title {
     font-size: 1.2em; }
+  div#second-content h2.article-space {
+    margin-top: 30px; }
+  div#second-content p.article-text {
+    color: #979797;
+    font-size: 0.9em; }
   div#second-content article {
     background-color: #fff;
     margin-top: 10px;
@@ -72,47 +118,58 @@ div#second-content {
       font-size: 2em; }
   div#second-content .row {
     padding-bottom: 40px; }
-  div#second-content .category-link {
+  div#second-content a.link {
     color: #000; }
-  div#second-content aside#login-form {
+  div#second-content aside#login-register-form {
     background-color: #fff;
     margin-top: 10px; }
-    div#second-content aside#login-form form {
+    div#second-content aside#login-register-form form {
       padding: 10px 15px 10px; }
-      div#second-content aside#login-form form .btn-left {
+      div#second-content aside#login-register-form form .btn {
+        color: #fff; }
+      div#second-content aside#login-register-form form .btn-left {
         margin-right: 5px; }
-      div#second-content aside#login-form form .aside-buttons {
+      div#second-content aside#login-register-form form .submit-btn {
+        background-color: #90c23a;
+        border-color: #90c23a; }
+      div#second-content aside#login-register-form form .aside-buttons {
         margin-bottom: 10px; }
-      div#second-content aside#login-form form .btn-block + .btn-block {
+      div#second-content aside#login-register-form form .btn-block + .btn-block {
         margin: 0; }
+      div#second-content aside#login-register-form form .active {
+        background: #2C3E52; }
+      div#second-content aside#login-register-form form #register {
+        display: none; }
   div#second-content aside#advertisement-content {
     background-color: antiquewhite; }
     div#second-content aside#advertisement-content .advertisement {
       width: 100%;
       height: 100%; }
   div#second-content #best-prace-content {
-    margin-left: 10px; }
+    margin-left: 0px; }
   div#second-content .info {
     border: solid 0.5px;
     margin-top: 10px; }
     div#second-content .info .fa-star {
       color: gold; }
     div#second-content .info p.info-content::before {
-      top: 63%; }
+      top: 67%; }
     div#second-content .info p.info-content::after {
-      top: 80%; }
+      top: 78%; }
     div#second-content .info i.icon-style {
       margin-top: -30px;
       background-color: #fff;
       border-radius: 50%; }
-  div#second-content .place-content i.icon-style {
-    margin-top: -30px;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    top: 50%;
-    right: left;
-    left: -15%; }
+  div#second-content .place-content {
+    padding-top: 10px; }
+    div#second-content .place-content i.icon-style {
+      margin-top: -30px;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      top: 50%;
+      right: left;
+      left: -15%; }
   div#second-content .evaluation {
     margin-top: 60px; }
     div#second-content .evaluation i.star-icon-style {
@@ -192,9 +249,11 @@ footer {
     margin-left: -15px; }
     footer .photos .indivisual-phpto {
       margin-bottom: 3px; }
-    footer .photos .thumbnail {
-      max-height: 6%;
-      max-height: 6%;
-      margin-left: 2px; }
+      footer .photos .indivisual-phpto .img-thumbnail {
+        height: 60px;
+        width: 80px;
+        margin-left: 2px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.15); }
 
 /*# sourceMappingURL=style.css.map */
