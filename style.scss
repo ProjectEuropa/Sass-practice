@@ -1,6 +1,10 @@
 $blackcolor: #000;
 $whitecolor: #fff;
 $thickgreen: #90c23a;
+html,
+body {
+    height: 100%;
+}
 
 .under-line-extend {
     content: "";
@@ -47,24 +51,33 @@ main {
         position: absolute;
         right: 0;
         top: 0;
-        width: 100%;
+        width: 100vw;
         z-index: 10000;
-        height: 100%;
         background-color: #fff;
+        span {
+            margin-top: -5px;
+            margin-right: 20px;
+        }
+        ul.smart-show-accordion-sub-menu {
+            display: none;
+            list-style: none;
+        }
+        span#smart-hide-accordion {
+            display: none;
+        }
         li {
             #hide-smart-menu {
                 text-align: center
             }
+
             i.fa-times {
                 @extend .smart-icon-extend;
             }
             a {
                 display: block;
-                font-size: 12px;
-                height: 52px;
-                line-height: 52px;
-                padding: 0 20px;
-                text-transform: capitalize;
+                font-size: 0.8em;
+                height: 15%;
+                padding: 20px 10px;
                 width: 100%;
                 border-bottom: 1px solid gray;
                 &:hover {
@@ -94,6 +107,7 @@ main {
         list-style: none;
         z-index: 999;
         background-color: #f9f9f9;
+        height: 16%;
         li a {
             margin-left: -40px;
             text-align: left;
@@ -125,7 +139,7 @@ main {
 div#second-content {
     background-color: #e1e1e1;
     .second-title {
-        font-size: 1em;
+        font-size: 0.8em;
         text-decoration: underline #90c23a;
     }
     .third-title {
@@ -295,12 +309,11 @@ aside {
 }
 
 footer {
-
+    .smart-no-flex {
+        display: flex;
+    }
     background-color: #2C3E52;
     color: #9399A2;
-    .footer-main-content {
-        padding: 0;
-    }
     p.footer-title {
         display: inline-block;
         color: $whitecolor;
@@ -364,6 +377,112 @@ footer {
     }
 }
 
-@media screen and (max-width 767px) {
-    main {}
+#loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 99;
+    display: none;
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-family: Helvetica, Arial, Sans-Serif;
+    z-index: 100;
+}
+
+@media (max-width: 1200px) {
+    div#second-content {
+        .info {
+            p.info-content::before {
+                top: 60%;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 992px) {
+    .article-wrapper {
+        max-width: 100%;
+        flex: auto;
+    }
+    .aside-wrapper {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    div#second-content {
+        .info {
+            .fa-star {
+                font-size: 1em;
+            }
+            p.info-content {
+                &::before {
+                    top: 43%;
+                }
+                &::after {
+                    top: 60%;
+                }
+            }
+        }
+    }
+    .aside-wrapper {
+        max-width: 100%;
+        flex: none;
+    }
+    footer {
+        .col-sm-3 {
+            max-width: none;
+            flex: none;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    article#pagination {
+        .smart-flex-column {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+    }
+    div#second-content .place-content i.icon-style {
+        top: 0;
+        left: 88%;
+    }
+    div#second-content .info p.info-content {
+        &::after {
+            top: 80%;
+        }
+        &::before {
+            top: 88%;
+        }
+    }
+    div#second-content .evaluation {
+        &::before {
+            top: 37%;
+        }
+    }
+    div#second-content .place-border {
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 443px) {
+    main #main-menu {
+        margin-top: 140px;
+    }
 }
