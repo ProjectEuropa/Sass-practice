@@ -40,6 +40,9 @@ main {
         margin-top: 100px;
         margin-bottom: 20px;
     }
+    #pc-hide-smart-show {
+        display: none;
+    }
     a i.fa-bars {
         @extend .smart-icon-extend;
     }
@@ -55,7 +58,6 @@ main {
         z-index: 10000;
         background-color: #fff;
         span {
-            margin-top: -5px;
             margin-right: 20px;
         }
         ul.smart-show-accordion-sub-menu {
@@ -106,9 +108,9 @@ main {
         position: absolute;
         list-style: none;
         z-index: 999;
-        background-color: #f9f9f9;
-        height: 16%;
+        background-color: $whitecolor;
         li a {
+            padding: 8px;
             margin-left: -40px;
             text-align: left;
             border: 1px solid #e5e5e5;
@@ -140,7 +142,7 @@ div#second-content {
     background-color: #e1e1e1;
     .second-title {
         font-size: 0.8em;
-        text-decoration: underline #90c23a;
+        text-decoration: underline $thickgreen;
     }
     .third-title {
         font-size: 1.2em;
@@ -193,8 +195,8 @@ div#second-content {
                 margin-right: 5px;
             }
             .submit-btn {
-                background-color: #90c23a;
-                border-color: #90c23a;
+                background-color: $thickgreen;
+                border-color: $thickgreen;
             }
             .aside-buttons {
                 margin-bottom: 10px;
@@ -261,13 +263,13 @@ div#second-content {
     .evaluation {
         margin-top: 60px;
         i.star-icon-style {
-            font-size: 1.3em;
+            font-size: 1em;
             color: gold;
         }
         &::before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 45%;
             margin-top: -55px;
             left: 0;
             height: 32px;
@@ -302,11 +304,16 @@ aside {
         background-color: $whitecolor;
         padding: 0;
         @extend .border-gray;
-        .fc-today {
-            background-color: blue;
+        .fc-scroller,
+        .fc-day-grid-container {
+            overflow-x: unset !important;
+            overflow-y: unset !important;
+            height: auto !important;
         }
     }
+
 }
+
 
 footer {
     .smart-no-flex {
@@ -363,7 +370,6 @@ footer {
         }
     }
     .photos {
-        margin-left: -15px;
         .indivisual-phpto {
             margin-bottom: 3px;
             .img-thumbnail {
@@ -390,6 +396,7 @@ footer {
     z-index: 99;
     display: none;
 }
+
 
 .square {
     width: 100%;
@@ -420,10 +427,20 @@ footer {
     }
     .aside-wrapper {
         max-width: 100%;
+        flex: auto;
     }
 }
 
 @media (max-width: 767px) {
+    main {
+        #pc-show-smart-hide {
+            display: none;
+        }
+        #pc-hide-smart-show {
+            display: block;
+        }
+    }
+
     div#second-content {
         .info {
             .fa-star {

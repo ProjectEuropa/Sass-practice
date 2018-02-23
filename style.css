@@ -28,6 +28,8 @@ header span {
 main #main-menu {
   margin-top: 100px;
   margin-bottom: 20px; }
+main #pc-hide-smart-show {
+  display: none; }
 main ul.smart-show {
   display: none;
   left: 0;
@@ -40,7 +42,6 @@ main ul.smart-show {
   z-index: 10000;
   background-color: #fff; }
   main ul.smart-show span {
-    margin-top: -5px;
     margin-right: 20px; }
   main ul.smart-show ul.smart-show-accordion-sub-menu {
     display: none;
@@ -74,9 +75,9 @@ main .accordion li ul {
   position: absolute;
   list-style: none;
   z-index: 999;
-  background-color: #f9f9f9;
-  height: 16%; }
+  background-color: #fff; }
   main .accordion li ul li a {
+    padding: 8px;
     margin-left: -40px;
     text-align: left;
     border: 1px solid #e5e5e5;
@@ -183,12 +184,12 @@ div#second-content {
   div#second-content .evaluation {
     margin-top: 60px; }
     div#second-content .evaluation i.star-icon-style {
-      font-size: 1.3em;
+      font-size: 1em;
       color: gold; }
     div#second-content .evaluation::before {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 45%;
       margin-top: -55px;
       left: 0;
       height: 32px;
@@ -209,8 +210,11 @@ div#second-content {
 aside #calendar {
   background-color: #fff;
   padding: 0; }
-  aside #calendar .fc-today {
-    background-color: blue; }
+  aside #calendar .fc-scroller,
+  aside #calendar .fc-day-grid-container {
+    overflow-x: unset !important;
+    overflow-y: unset !important;
+    height: auto !important; }
 
 footer {
   background-color: #2C3E52;
@@ -255,16 +259,14 @@ footer {
     footer .twitter p span {
       color: aquamarine;
       font-style: oblique; }
-  footer .photos {
-    margin-left: -15px; }
-    footer .photos .indivisual-phpto {
-      margin-bottom: 3px; }
-      footer .photos .indivisual-phpto .img-thumbnail {
-        height: 60px;
-        width: 80px;
-        margin-left: 2px;
-        background-color: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.15); }
+  footer .photos .indivisual-phpto {
+    margin-bottom: 3px; }
+    footer .photos .indivisual-phpto .img-thumbnail {
+      height: 60px;
+      width: 80px;
+      margin-left: 2px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.15); }
 
 #loading {
   width: 100%;
@@ -298,8 +300,14 @@ footer {
     flex: auto; }
 
   .aside-wrapper {
-    max-width: 100%; } }
+    max-width: 100%;
+    flex: auto; } }
 @media (max-width: 767px) {
+  main #pc-show-smart-hide {
+    display: none; }
+  main #pc-hide-smart-show {
+    display: block; }
+
   div#second-content .info .fa-star {
     font-size: 1em; }
   div#second-content .info p.info-content::before {

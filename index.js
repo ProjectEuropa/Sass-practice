@@ -58,6 +58,11 @@ $(function () {
         $('#smart-show-accordion').show();
         $(this).hide();
     });
+    $('.img-thumbnail').click(function() {
+        const index = $('.img-thumbnail').index(this) + 1;
+        $('#photo-content').empty().append('<img class="img-fluid" src="image/phpto-' + index + '.jpg">');
+        $('#modal-dialog').modal();
+    });
 
     document.getElementById("nowYear").innerText = new Date().getFullYear();
 });
